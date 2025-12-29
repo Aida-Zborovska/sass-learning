@@ -1,0 +1,11 @@
+$color-primary: teal; // global scope
+
+body {
+  $color-primary: lightblue; // local scope
+  $color-secondary: white !global; // з локальної області в глобальну
+  background-color: $color-primary;
+}
+
+p {
+  color: $color-secondary; // без !global в body - undefined
+}
